@@ -1,0 +1,3 @@
+#!/bin/sh
+
+date -d '1 day ago' +%Y-%m-%d >/var/run/dailyaggregates_lastrun

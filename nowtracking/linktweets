@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo "linktweets Starting at: " > /home/ubuntu/nowtracking/linktweets_lastrun
+
+date >>/home/ubuntu/nowtracking/linktweets_lastrun
+mysql -u nowtracking  nowtracking </home/ubuntu/nowtracking/linktweets.sql
+
+#echo  "justran " >/home/ubuntu/nowtracking/justran
+
+echo ", ending at: " >> /home/ubuntu/nowtracking/linktweets_lastrun
+
+date >>/home/ubuntu/nowtracking/linktweets_lastrun

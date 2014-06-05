@@ -1,0 +1,39 @@
+#!/bin/sh
+
+echo 'Dailyaggregates Starting at: ' `date`
+
+echo 'Current PERL process:'
+ps ax |grep perl
+killall oauth.pl
+sleep 2
+echo 'New PERL process:'
+ps ax |grep perl
+
+/home/ubuntu/nowtracking/linktweets
+
+echo 'bayes: ' `date`
+
+/home/ubuntu/nowtracking/bayes2.pl
+
+echo 'reverse geocode: ' `date`
+/home/ubuntu/nowtracking/reversegeocode.pl
+
+/home/ubuntu/nowtracking/linktweets
+
+echo "dailyaggregates Starting at: " > /home/ubuntu/nowtracking/dailyaggregates_lastrun
+
+date >>/home/ubuntu/nowtracking/dailyaggregates_lastrun
+mysql -u nowtracking  nowtracking </home/ubuntu/nowtracking/dailyaggregates.sql
+
+#echo  "justran " >/home/ubuntu/nowtracking/justran
+
+echo ", ending at: " >> /home/ubuntu/nowtracking/dailyaggregates_lastrun
+
+date >>/home/ubuntu/nowtracking/dailyaggregates_lastrun
+
+
+date -d '1 day ago' +%Y-%m-%d >/var/run/dailyaggregates_lastrun
+
+wget http://natame.com/nt/getmapdata.php?DISEASE=Influenza -O /var/www/flu2012/flu_cur.json -q
+
+echo 'Ending at: ' `date`
