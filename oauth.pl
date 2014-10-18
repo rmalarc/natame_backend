@@ -16,10 +16,10 @@ $Log::Minimal::COLOR=1;
 #my $parsepipe;
 #open($parsepipe,"|/home/ubuntu/parsetweet.pl");
 
-my $consumer_key = 'QydRA7nKevVURVXWmX7Iw';
-my $consumer_secret = 'I2fo7aYdPn1y74BQyjD2A5UesR6i6JxAHRpwRJk3Mo';
-my $token = '95967905-xBftxEcsRtbc0qaZRXwkCJ8T0aRV8Dm5iGB9sL88m';
-my $token_secret= 'EtIc0w0GglRalaRaZGJJxCNBV2ZEAqaXaj3rVkj9FA';
+my $consumer_key = '';
+my $consumer_secret = '';
+my $token = '';
+my $token_secret= '';
   # to use OAuth authentication
 my $done = AnyEvent->condvar;
 
