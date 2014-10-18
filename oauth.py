@@ -2,10 +2,10 @@
 
 from twitter import *
 
-CONSUMER_KEY = 'RMej64Q9Sl5qGby1tRGGwA';
-CONSUMER_SECRET = 'jqzIW9kIdfB18SFZK1l41PjQd7vtnG7oYXrxAENQ';
-OAUTH_TOKEN = '95967905-1pi86CDekGvOnCaAUwdqKUFFyM6tYo30KSGknW94';
-OAUTH_SECRET= 'IllhrT4zB1mkrIV2ZxwP1aH9msPeQzl26HOSs4';
+CONSUMER_KEY = '';
+CONSUMER_SECRET = '';
+OAUTH_TOKEN = '-';
+OAUTH_SECRET= '';
 
 # see "Authentication" section below for tokens and keys
 t = TwitterStream(
