@@ -7,9 +7,9 @@ use LWP::UserAgent;
 my $curl = LWP::UserAgent->new( timeout => 120 );
 
 
-my $host = "localhost";
-my $database = "nowtracking";
-my $user = "nowtracking";
+my $host = "";
+my $database = "";
+my $user = "";
 my $pw = "";
 
 my $dbh = DBI->connect("DBI:mysql:$database;host=$host", $user, $pw)||die "Could not connect to database: $DBI::errstr"
