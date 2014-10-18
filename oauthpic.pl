@@ -20,10 +20,10 @@ $Log::Minimal::COLOR=1;
 
 
 
-my $consumer_key = 'RMej64Q9Sl5qGby1tRGGwA';
-my $consumer_secret = 'jqzIW9kIdfB18SFZK1l41PjQd7vtnG7oYXrxAENQ';
-my $token = '95967905-1pi86CDekGvOnCaAUwdqKUFFyM6tYo30KSGknW94';
-my $token_secret= 'IllhrT4zB1mkrIV2ZxwP1aH9msPeQzl26HOSs4';
+my $consumer_key = '';
+my $consumer_secret = '';
+my $token = '-';
+my $token_secret= '';
   # to use OAuth authentication
 my $done = AnyEvent->condvar;
 
